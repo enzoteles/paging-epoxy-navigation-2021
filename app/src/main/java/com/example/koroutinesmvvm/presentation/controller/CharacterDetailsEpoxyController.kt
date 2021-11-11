@@ -47,14 +47,14 @@ class CharacterDetailsEpoxyController: EpoxyController() {
         ).id("image").addTo(this)
 
         BottomEpoxyModel(
-            title = "Origin",
-            description = characterResponse?.origin?.name?: ""
+            origin = characterResponse?.origin?.name ?: "",
+            species = characterResponse?.species?: ""
         ).id("bottom_1").addTo(this)
 
-        BottomEpoxyModel(
+        /*BottomEpoxyModel(
             title = "Species",
             description = characterResponse?.species ?: ""
-        ).id("bottom_2").addTo(this)
+        ).id("bottom_2").addTo(this)*/
     }
 
     data class HeaderEpoxyModel(
@@ -77,12 +77,12 @@ class CharacterDetailsEpoxyController: EpoxyController() {
     }
 
     data class BottomEpoxyModel(
-        val title:String,
-        val description: String
+        val origin:String,
+        val species: String
     ):ViewBindingKotlinModel<ModelCharacterDetailBottomBinding>(R.layout.model_character_detail_bottom){
         override fun ModelCharacterDetailBottomBinding.bind() {
-            tvOriginValue.text = title
-            tvSpeciesValue.text = description
+            tvOriginValue.text = origin
+            tvSpeciesValue.text = species
 
         }
 
