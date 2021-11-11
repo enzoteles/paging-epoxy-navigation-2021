@@ -1,7 +1,7 @@
 package com.example.koroutinesmvvm.domain
 
-import com.example.koroutinesmvvm.data.remote.GetCharacterByIdDTO
+import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
 
 interface ShareRepository {
-    suspend fun getCharacterById(characterId: Int): GetCharacterByIdDTO?
+    suspend fun getCharacterById(characterId: Int): GetCharacterByIdMapper?
 }

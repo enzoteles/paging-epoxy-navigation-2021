@@ -10,7 +10,7 @@ class ApiClient(
     private val shareDataSource: ShareDataSource
 ) {
     suspend fun getCharacterById(characterId: Int): GenericResponse<GetCharacterByIdDTO> {
-        return safeApiCall { shareDataSource.getCharacterById(characterId) }
+        return safeApiCall { shareDataSource.getCharacterById(characterId)}
     }
 
     private inline fun<T> safeApiCall(apiCall: ()-> Response<T>): GenericResponse<T>{

@@ -4,9 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.koroutinesmvvm.data.remote.GetCharacterByIdDTO
 import com.example.koroutinesmvvm.data.repository.ShareRepositoryImpl
-import com.example.koroutinesmvvm.domain.ShareRepository
+import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
 import kotlinx.coroutines.launch
 
 class ShareViewModel: ViewModel() {
@@ -14,8 +13,9 @@ class ShareViewModel: ViewModel() {
     private val repository = ShareRepositoryImpl()
 
     //usando a estratégia de encapsulamento
-    private val _characterByIdLiveData = MutableLiveData<GetCharacterByIdDTO?>()
-    val characterByIdLiveData: LiveData<GetCharacterByIdDTO?> = _characterByIdLiveData
+    // aqui estou usando o mapper GetCharacterById ao invés do GetCharacterByIdDTO
+    private val _characterByIdLiveData = MutableLiveData<GetCharacterByIdMapper?>()
+    val characterByIdMapperLiveData: LiveData<GetCharacterByIdMapper?> = _characterByIdLiveData
 
     fun refreshCharacter(characterId: Int){
         //usando o scope do coroutines

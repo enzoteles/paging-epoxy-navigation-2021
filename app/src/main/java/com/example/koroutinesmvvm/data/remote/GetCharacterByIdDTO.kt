@@ -1,6 +1,6 @@
 package com.example.koroutinesmvvm.data.remote
 
-import com.example.koroutinesmvvm.domain.model.GetCharacterById
+import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
 
 data class GetCharacterByIdDTO(
     val created: String,
@@ -27,15 +27,15 @@ data class Origin(
     val url: String
 )
 
-fun GetCharacterByIdDTO.toCoinDetail(): GetCharacterById {
-    return GetCharacterById(
-        created = created,
+fun GetCharacterByIdDTO.toGetCharacterByIdMapper(): GetCharacterByIdMapper {
+    return GetCharacterByIdMapper(
         episode = episode,
-        gender = gender,
         id = id,
         image = image,
         location = com.example.koroutinesmvvm.domain.model.Location(location.name, location.url),
         name = name,
-        origin = com.example.koroutinesmvvm.domain.model.Origin(origin.name, origin.url)
+        origin = com.example.koroutinesmvvm.domain.model.Origin(origin.name, origin.url),
+        species = species,
+        status = status
     )
 }

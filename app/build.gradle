@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -32,6 +33,10 @@ android {
     buildFeatures {
         viewBinding true
     }
+    //usando o epoxy
+    kapt{
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
@@ -59,4 +64,8 @@ dependencies {
 
     //ViewModel + Coroutines
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+
+    //Airbnb Epoxy
+    implementation "com.airbnb.android:epoxy:4.4.1"
+    kapt "com.airbnb.android:epoxy-processor:4.4.1"
 }
