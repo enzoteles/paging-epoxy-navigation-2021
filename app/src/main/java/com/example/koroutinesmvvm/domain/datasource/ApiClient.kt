@@ -2,6 +2,7 @@ package com.example.koroutinesmvvm.domain.datasource
 
 import com.example.koroutinesmvvm.common.GenericResponse
 import com.example.koroutinesmvvm.data.remote.GetCharacterByIdDTO
+import com.example.koroutinesmvvm.data.remote.GetCharacterPageDTO
 import com.example.koroutinesmvvm.domain.datasource.ShareDataSource
 import retrofit2.Response
 import java.lang.Exception
@@ -11,6 +12,10 @@ class ApiClient(
 ) {
     suspend fun getCharacterById(characterId: Int): GenericResponse<GetCharacterByIdDTO> {
         return safeApiCall { shareDataSource.getCharacterById(characterId)}
+    }
+
+    suspend fun getCharactersPage(pageIndex: Int): GenericResponse<GetCharacterPageDTO>{
+        return safeApiCall { shareDataSource.getCharactersPage(pageIndex) }
     }
 
     private inline fun<T> safeApiCall(apiCall: ()-> Response<T>): GenericResponse<T>{

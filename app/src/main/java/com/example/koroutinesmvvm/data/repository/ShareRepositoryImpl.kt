@@ -2,7 +2,7 @@ package com.example.koroutinesmvvm.data.repository
 
 import com.example.koroutinesmvvm.common.NetworkLayer
 import com.example.koroutinesmvvm.data.remote.toGetCharacterByIdMapper
-import com.example.koroutinesmvvm.domain.ShareRepository
+import com.example.koroutinesmvvm.domain.repo.ShareRepository
 import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
 
 class ShareRepositoryImpl: ShareRepository {

@@ -1,6 +1,8 @@
 package com.example.koroutinesmvvm.data.remote
 
 import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
+import com.example.koroutinesmvvm.domain.model.LocationMapper
+import com.example.koroutinesmvvm.domain.model.OriginMapper
 
 data class GetCharacterByIdDTO(
     val created: String,
@@ -32,9 +34,9 @@ fun GetCharacterByIdDTO.toGetCharacterByIdMapper(): GetCharacterByIdMapper {
         episode = episode,
         id = id,
         image = image,
-        location = com.example.koroutinesmvvm.domain.model.Location(location.name, location.url),
+        location = LocationMapper(location.name, location.url),
         name = name,
-        origin = com.example.koroutinesmvvm.domain.model.Origin(origin.name, origin.url),
+        origin = OriginMapper(origin.name, origin.url),
         species = species,
         status = status
     )

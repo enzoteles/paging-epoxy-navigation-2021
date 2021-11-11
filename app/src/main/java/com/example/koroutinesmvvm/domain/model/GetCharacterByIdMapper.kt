@@ -4,19 +4,19 @@ data class GetCharacterByIdMapper(
     val episode: List<String> = listOf(),
     val id: Int = 0,
     val image: String = "",
-    val location: Location = Location(),
+    val location: LocationMapper = LocationMapper(),
     val name: String = "",
-    val origin: Origin = Origin(),
+    val origin: OriginMapper = OriginMapper(),
     val species: String = "",
     val status:String = "",
 )
 
-data class Location(
+data class LocationMapper(
     val name: String = "",
     val url: String = ""
 )
 
-data class Origin(
+data class OriginMapper(
     val name: String = "",
     val url: String = ""
 )
