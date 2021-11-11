@@ -68,6 +68,7 @@ dependencies {
     //Airbnb Epoxy
     implementation "com.airbnb.android:epoxy:4.4.1"
     kapt "com.airbnb.android:epoxy-processor:4.4.1"
+    implementation 'com.airbnb.android:epoxy-paging:4.4.1'
 
     //Paging
     def paging_version = "3.0.1"

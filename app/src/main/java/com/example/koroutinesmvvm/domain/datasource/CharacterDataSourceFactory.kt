@@ -2,7 +2,7 @@ package com.example.koroutinesmvvm.domain.datasource
 
 import androidx.paging.DataSource
 import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
-import com.example.koroutinesmvvm.domain.repo.CharacterRepository
+import com.example.koroutinesmvvm.domain.repo.list.CharacterRepository
 import kotlinx.coroutines.CoroutineScope
 
 class CharacterDataSourceFactory(

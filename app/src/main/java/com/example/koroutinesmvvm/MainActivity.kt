@@ -5,18 +5,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.koroutinesmvvm.databinding.ActivityMainBinding
-import com.example.koroutinesmvvm.presentation.controller.CharacterDetailsEpoxyController
-import com.example.koroutinesmvvm.presentation.viewmodel.ShareViewModel
-import com.squareup.picasso.Picasso
+import com.example.koroutinesmvvm.presentation.controller.detail.CharacterDetailsEpoxyController
+import com.example.koroutinesmvvm.presentation.viewmodel.detail.ShareViewModel
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
+    private val epoxyController = CharacterDetailsEpoxyController()
     //instanciando o view model
     val viewModel: ShareViewModel by lazy {
         ViewModelProvider(this).get(ShareViewModel::class.java)
     }
-
-    private val epoxyController = CharacterDetailsEpoxyController()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

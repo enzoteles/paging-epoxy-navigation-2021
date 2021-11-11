@@ -1,15 +1,10 @@
 package com.example.koroutinesmvvm.domain.datasource
 
 import androidx.paging.PageKeyedDataSource
-import androidx.paging.PagingSource
-import androidx.paging.PagingState
 import com.example.koroutinesmvvm.domain.model.GetCharacterByIdMapper
-import com.example.koroutinesmvvm.domain.repo.CharacterRepository
+import com.example.koroutinesmvvm.domain.repo.list.CharacterRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import retrofit2.HttpException
-import java.io.IOException
-import java.lang.Exception
 
 
 class CharacterDataSource(
