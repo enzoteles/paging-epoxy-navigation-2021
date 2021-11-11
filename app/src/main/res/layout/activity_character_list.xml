@@ -12,6 +12,7 @@
         app:itemSpacing="8dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
+        android:padding="8dp"
         tools:itemCount="12"
         />
 
