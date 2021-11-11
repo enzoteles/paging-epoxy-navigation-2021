@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             }
         }
 
-        viewModel.refreshCharacter(54)
+        viewModel.refreshCharacter(10)
         binding.epoxyRV.setControllerAndBuildModels(epoxyController)
 
     }

@@ -51,6 +51,10 @@ class CharacterDetailsEpoxyController: EpoxyController() {
             description = characterResponse?.origin?.name?: ""
         ).id("bottom_1").addTo(this)
 
+        BottomEpoxyModel(
+            title = "Species",
+            description = characterResponse?.species ?: ""
+        ).id("bottom_2").addTo(this)
     }
 
     data class HeaderEpoxyModel(
