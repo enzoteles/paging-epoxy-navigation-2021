@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoroutinesMVVM">
         <activity
-            android:name=".presentation.ui.acitivity.CharacterListActivity"
+            android:name=".presentation.ui.acitivity.NavGraphActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
