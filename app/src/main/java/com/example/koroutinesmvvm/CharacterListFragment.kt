@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.koroutinesmvvm.databinding.FragmentCharacterListBinding
 import com.example.koroutinesmvvm.presentation.controller.list.CharacterListEpoxyController
@@ -49,9 +50,7 @@ class CharacterListFragment : Fragment(R.layout.fragment_character_list) {
     }
 
     private fun onCharacterSelected(characterId: Int){
-        Log.i("ID", "$characterId")
-
+        val action = CharacterListFragmentDirections.actionCharacterListFragmentToCharacterDetailFragment(characterId)
+        findNavController().navigate(action)
     }
-
-
 }

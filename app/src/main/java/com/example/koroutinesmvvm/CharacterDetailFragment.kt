@@ -20,6 +20,7 @@ class CharacterDetailFragment : Fragment(R.layout.fragment_character_detail) {
         ViewModelProvider(this).get(ShareViewModel::class.java)
     }
 
+    val safeArgs: CharacterDetailFragmentArgs by navArgs()
 
     private  var _binding: FragmentCharacterDetailBinding?= null
     private  val binding: FragmentCharacterDetailBinding get() = _binding!!
@@ -50,7 +51,8 @@ class CharacterDetailFragment : Fragment(R.layout.fragment_character_detail) {
             }
         }
 
-        viewModel.refreshCharacter(1)
+        val id = safeArgs.characterId
+        viewModel.refreshCharacter(id)
         binding.epoxyRV.setControllerAndBuildModels(epoxyController)
     }
 }

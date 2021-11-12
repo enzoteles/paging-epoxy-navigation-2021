@@ -11,6 +11,7 @@
         android:label="fragment_character_list"
         tools:layout="@layout/fragment_character_list"
         >
+
         <action
             android:id="@+id/action_characterListFragment_to_characterDetailFragment"
             app:destination="@id/characterDetailFragment" />
@@ -20,9 +21,11 @@
         android:name="com.example.koroutinesmvvm.CharacterDetailFragment"
         android:label="fragment_character_detail"
         tools:layout="@layout/fragment_character_detail">
+
         <argument
             android:name="characterId"
             app:argType="integer"
-            android:defaultValue="-1" />
+            android:defaultValue="0" />
+
     </fragment>
 </navigation>
