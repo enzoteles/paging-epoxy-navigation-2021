@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/characterListFragment"
-        android:name="com.example.koroutinesmvvm.CharacterListFragment"
+        android:name="com.example.koroutinesmvvm.presentation.ui.fragment.CharacterListFragment"
         android:label="fragment_character_list"
         tools:layout="@layout/fragment_character_list"
         >
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/characterDetailFragment"
-        android:name="com.example.koroutinesmvvm.CharacterDetailFragment"
+        android:name="com.example.koroutinesmvvm.presentation.ui.fragment.CharacterDetailFragment"
         android:label="fragment_character_detail"
         tools:layout="@layout/fragment_character_detail">
 

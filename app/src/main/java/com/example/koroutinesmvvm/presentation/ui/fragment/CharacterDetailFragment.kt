@@ -1,4 +1,4 @@
-package com.example.koroutinesmvvm
+package com.example.koroutinesmvvm.presentation.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
+import com.example.koroutinesmvvm.R
 import com.example.koroutinesmvvm.databinding.FragmentCharacterDetailBinding
 import com.example.koroutinesmvvm.presentation.controller.detail.CharacterDetailsEpoxyController
 import com.example.koroutinesmvvm.presentation.viewmodel.detail.ShareViewModel
