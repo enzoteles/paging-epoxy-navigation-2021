@@ -8,10 +8,10 @@ Aqui usamos a arquitetura MVVM
 ## [Navigation](https://developer.android.com/guide/navigation?gclid=CjwKCAiAvriMBhAuEiwA8Cs5lRKFs-Da1EV3vC3g_4wwykqHVqPaMpW3mNWgP4zQFWjVUus3E4M8lxoCWRsQAvD_BwE&gclsrc=aw.ds)
 A navegação se refere às interações que permitem aos usuários navegar, entrar e sair de diferentes partes do conteúdo no aplicativo. O componente de navegação do Android Jetpack ajuda você a implementar a navegação, desde simples cliques em botões até padrões mais complexos, como barras de aplicativos e a gaveta de navegação. Esse componente também garante uma experiência do usuário consistente e previsível por meio da adesão a um conjunto de princípios estabelecido.
 
-## [Epoxy] (https://github.com/airbnb/epoxy)
+## [Epoxy](https://github.com/airbnb/epoxy)
 Usamos o Epoxy RecyclerView para fazer nossas listas
 
-## [View Binding] (https://developer.android.com/topic/libraries/view-binding)
+## [View Binding](https://developer.android.com/topic/libraries/view-binding)
 A vinculação de visualizações é um recurso que facilita a programação de códigos que interagem com visualizações. Quando a vinculação de visualizações é ativada em um módulo, ela gera uma classe de vinculação para cada arquivo de layout XML presente nesse módulo. A instância de uma classe de vinculação contém referências diretas a todas as visualizações que têm um código no layout correspondente.
 Na maioria dos casos, a vinculação de visualizações substitui findViewById.
 
@@ -32,4 +32,13 @@ O retrofit torna nossa HTTP API em interface java
 A biblioteca Paging ajuda a carregar e exibir pequenos blocos de dados por vez. O carregamento de dados parciais sob demanda reduz o uso da largura de banda da rede e dos recursos do sistema.
 
 
+ Aqui estão as duas telas do projeto:
+
+ * CharacterList
+   
+   <img width="370" alt="Screen Shot 2021-11-12 at 21 56 03" src="https://user-images.githubusercontent.com/5742609/141599535-b8af91e2-5011-4c1f-880b-5fcd0f7c8ea1.png">
+   
+ * CharacterDetail
+
+   <img width="371" alt="Screen Shot 2021-11-12 at 21 56 16" src="https://user-images.githubusercontent.com/5742609/141599563-b60293ef-9a20-4cb3-aa42-1651aca2379f.png">
 
